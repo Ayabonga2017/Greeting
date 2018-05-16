@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/greet.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Greetings</h1>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="two columns">
+        <h3>Name </h3>
+      </div>
+      <div class="six columns">
+        <input type="text" name="name of a person" placeholder="Enter text here" id="myInput">
+      </div>
+
+      <div class="two columns">
+        0
+      </div>
+    </div>
+    <div class="row">
+      <button onclick="document.getElementById('myInput').value = ''">Clear name </button>
+    </div>
+
+    <div class="row">
+      <label class="four columns">
+                <input type="radio" name="languageType" class="languageTypeRadio" value="Hi">
+                <span class="label-body">English</span>
+              </label>
+      <label class="four columns">
+                <input type="radio" name="languageType" class="languageTypeRadio" value="Molo">
+                <span class="label-body">IsiXhosa</span>
+              </label>
+      <label class="four columns">
+                <input type="radio" name="languageType" class="languageTypeRadio" value="Hallo">
+                <span class="label-body">Afrikaans</span>
+              </label>
+    </div>
+
+    <div class="">
+      <button class="button-primary LanguageAddBtn" type="button" name="button">Greet Me</button>
+          </div>
+          
+
+    </div>
+    <script src="js/greet-factory.js" charset="utf-8"></script>
+    <script src="js/greet.js" charset="utf-8"></script>
+</body>
+
+</html>
