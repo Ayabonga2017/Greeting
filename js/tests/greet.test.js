@@ -22,6 +22,14 @@ describe("Greetings in different languges" ,function(){
 
         greet.GreetLanguage("Jacob", 'Afrikaans');
 
+        assert.equal('Halo, ' + "Jacob", greet.GreetMe());
+      })
+
+      it('should not be able to Greet Jacob in Afrikaans', function(){
+        var greet = GreetmeFunction();
+
+        greet.GreetLanguage("Jacob", 'Afrikaans');
+
         assert.equal('Hey, ' + "Jacob", greet.GreetMe());
       })
     });
