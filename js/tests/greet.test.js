@@ -30,6 +30,6 @@ describe("Greetings in different languges" ,function(){
 
         greet.GreetLanguage("Jacob", 'Afrikaans');
 
-        assert.equal('Halo, Jacob', greet.GreetMe());
+        assert.equal('Exe, Jacob', greet.GreetMe());
       })
     });
