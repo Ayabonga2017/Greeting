@@ -1,8 +1,6 @@
 var nameElem = document.querySelector('.name');
 var LanguageAddBtn = document.querySelector('.LanguageAddBtn');
 var greetmeElem = document.querySelector('.greetme');
-var languageTypeRadioElem = document.querySelector('.languageTypeRadio')
-
 // console.log(JSON.stringify(names));
 var NameStorage = [];
 var languageChange = GreetmeFunction();
@@ -16,8 +14,7 @@ LanguageAddBtn.addEventListener('click', function() {
 
   addName(theName);
   NameStorage.push(theName);
-
-  localStorage['NameStorage'] = JSON.stringify(NameStorage);
+localStorage['NameStorage'] = JSON.stringify(NameStorage);
 });
 
 function addName(names) {
@@ -25,10 +22,12 @@ function addName(names) {
   var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
   if (checkedRadioBtn) {
 
-    var person = greetmeElem.value; //languageChange.greetP();
+    var person = greetmeElem.value;
     console.log(person);
-    var language = languageTypeRadioElem.value;
-    greetmeElem.innerHTML = languageChange.GreetLanguage(person ,language);
+    var language = checkedRadioBtn.value;
+    console.log(language);
+    languageChange.GreetLanguage(person, language);
+    nameElem.innerHTML = languageChange.GreetMe();
 
   }
 }

@@ -2,6 +2,7 @@ function GreetmeFunction() {
 
   var GreetPerson = "";
   var name = '';
+  var typeLanguage= '';
 
 
   function GreetLanguage(person, language) {
@@ -9,18 +10,20 @@ function GreetmeFunction() {
       name = person;
     }
 
+
     if (language === "English") {
 
     GreetPerson = "Hey, " + person;
 
-} else if (language === "IsiXhosa") {
+} if (language === "IsiXhosa") {
 
      GreetPerson = "Mhollo, " + person;
 
-
-    } else if(language === "Afrikaans"){
+  }if(language === "Afrikaans"){
 
       GreetPerson = "Halo, " + person;
+        console.log(language);
+
     }
 
   }
