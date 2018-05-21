@@ -1,5 +1,6 @@
 .buttons{
     margin-top: 1em;
+    color: aqua;
 }
 
 .container {
@@ -9,6 +10,7 @@
   background-color: ;
   padding : 1em;
   font-family: arial;
+
 }
 
 .counter {
@@ -19,6 +21,7 @@ button {
   padding: 1em;
   font-size: 1em;
   background-color: orange;
+
 }
 
 
@@ -259,7 +262,7 @@ code, kbd, pre, samp {
  */
 
 button, input, optgroup, select, textarea {
-  color: inherit;
+  color: Red;
   /* 1 */
   font: inherit;
   /* 2 */
@@ -273,6 +276,7 @@ button, input, optgroup, select, textarea {
 
 button {
   overflow: visible;
+
 }
 
 /**
@@ -310,6 +314,7 @@ input[type="reset"], input[type="submit"] {
 
 button[disabled], html input[disabled] {
   cursor: default;
+
 }
 
 /**

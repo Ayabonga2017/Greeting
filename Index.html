@@ -1,5 +1,6 @@
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="css/greet.css">
   <link rel="stylesheet" href="css/skeleton.css">
@@ -8,48 +9,65 @@
 
 <body>
   <header>
-    <h1>Greetings</h1>
+
+    <h1>GREETINGS</h1>
   </header>
+
   <div class="container">
     <div class="row">
       <div class="two columns">
-        <h3>Name </h3>
+
+        <h4>Name </h4>
       </div>
-      <div class="six columns">
-        <input type="text" name="name of a person" placeholder="Enter text here" id="myInput">
+      <div class="ten columns">
+
+        <span class="counter">0</span>
+
+        <div class="six columns">
+
+<input type="text" name="" value="" class="greetme" placeholder="Enter name here" id="greetme">
+        </div>
+
+        <div class="name">
+
+            </div>
       </div>
 
-      <div class="two columns">
-        0
-      </div>
-    </div>
-    <div class="row">
-      <button onclick="document.getElementById('myInput').value = ''">Clear name </button>
+      <br>
+      <br>
     </div>
 
+    <br>
+    <br>
     <div class="row">
       <label class="four columns">
-                <input type="radio" name="languageType" class="languageTypeRadio" value="Hi">
+                <input type="radio" name="languageType" class="languageTypeRadio" value="English">
                 <span class="label-body">English</span>
               </label>
       <label class="four columns">
-                <input type="radio" name="languageType" class="languageTypeRadio" value="Molo">
+                <input type="radio" name="languageType" class="languageTypeRadio" value="IsiXhosa">
                 <span class="label-body">IsiXhosa</span>
               </label>
       <label class="four columns">
-                <input type="radio" name="languageType" class="languageTypeRadio" value="Hallo">
+                <input type="radio" name="languageType" class="languageTypeRadio" value="Afrikaans">
                 <span class="label-body">Afrikaans</span>
               </label>
     </div>
 
-    <div class="">
-      <button class="button-primary LanguageAddBtn" type="button" name="button">Greet Me</button>
-          </div>
-          
+    <div class="row">
+      <div class="six columns">
+        <button class="button-primary LanguageAddBtn" type="button" name="button">Greet Me</button>
+      </div>
+      <div class="six columns">
+
+        <button class="button-primary" onclick="document.getElementById('greetme').value = ''">Clear Name</button>
+      </div>
 
     </div>
-    <script src="js/greet-factory.js" charset="utf-8"></script>
-    <script src="js/greet.js" charset="utf-8"></script>
+  </div>
+
 </body>
 
+<script src="js/greet-factory.js" charset="utf-8"></script>
+<script src="js/greet.js" charset="utf-8"></script>
 </html>
