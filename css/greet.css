@@ -1,18 +1,28 @@
-.buttons{
-    margin-top: 1em;
-    color: aqua;
+.buttons {
+  margin-top: 1em;
+  color: aqua;
+}
+.body{
+  background-color:Aqua;
 }
 
 .container {
-
-  width : 1024px;
+  width: 1024px;
   margin: auto;
   background-color: ;
-  padding : 1em;
+  padding: 30%;
   font-family: arial;
-
+  /* background-color:Aqua; */
 }
-
+.InputText{
+  font-size: 20px;
+}
+.namegreeted{
+  font-size: 20px;
+padding-left: 30%;
+/* background-color:Aqua; */
+color: blue;
+}
 .counter {
   font-size: 3em;
 }
@@ -21,11 +31,12 @@ button {
   padding: 1em;
   font-size: 1em;
   background-color: orange;
-
 }
 
-
-
+.name {
+  font-size: 40 px;
+  align-items: center;
+}
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
@@ -276,7 +287,6 @@ button, input, optgroup, select, textarea {
 
 button {
   overflow: visible;
-
 }
 
 /**
@@ -314,7 +324,6 @@ input[type="reset"], input[type="submit"] {
 
 button[disabled], html input[disabled] {
   cursor: default;
-
 }
 
 /**
