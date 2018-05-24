@@ -5,20 +5,15 @@ var ClearbtnElement = document.querySelector(".Clearbtn");
 var namegreet = document.querySelector(".namegreeted");
 var counterElem = document.querySelector(".counter");
 
+var NameStorage={};
 var FactoryGreet = GreetmeFunction(NameStorage);
 
 
-var NameStorage = {};
-
-//when the greet button is pressed check if this user was already greeted before
-//by looking if the userName exists in namesGreeted if not increment this counter and update the screen
-if (NameStorage[userName] === undefined){
-    NameStorage++;
-    //add an entry for the user that was greeted in the Object Map
-    NameStorage[userName] = 0;
-    //update the DOM to display the counter
-    greetingsElem.innerHTML = greetingsCounter;
+if (localStorage['NameStorage']) {
+  NameStorage = JSON.parse(localStorage['NameStorage']);
 }
+// var NameStorage = localStorage.getItem('NamesGreted') ? JSON.parse(localStorage.getItem('NamesGreted')) : {};
+
 
 function Greetme() {
 
@@ -46,7 +41,6 @@ GreetbtnElement.addEventListener('click', function() {
 counterElem.innerHTML=FactoryGreet.CountPeople();
 localStorage.setItem("NamesGreted", JSON.stringify(FactoryGreet.GreetMe()));
 localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
-   //NameStorage.push(GreetMe());
 })
 
 //clear button for local storage

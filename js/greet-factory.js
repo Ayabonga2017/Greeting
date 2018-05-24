@@ -1,8 +1,8 @@
-function GreetmeFunction(NameStorage) {
+function GreetmeFunction() {
 
   var GreetPerson = "";
   var name = '';
-  var Countkeep = NameStorage || {};
+  var Countkeep = name || {};
 
 
 
@@ -51,16 +51,13 @@ function GreetmeFunction(NameStorage) {
     return Object.keys(Countkeep).length;
 
   }
-  function localname(){
-    name;
-  }
+
 
 
 
   return {
     GreetLanguage,
     GreetMe,
-    localname,
     CountPeople
   }
 }
