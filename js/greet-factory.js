@@ -11,11 +11,7 @@ function GreetmeFunction(NameStorage) {
     if (NameStorage != '') {
       name = NameStorage;
     }
-    // if (name[person] === undefined){
-    //
-    //   //add an entry for the user that was greeted in the Object Map
-    //   name[person] = '';
-    // }
+
 
     if (Countkeep[person] === undefined){
 
