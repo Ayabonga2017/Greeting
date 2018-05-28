@@ -1,26 +1,26 @@
-function GreetmeFunction() {
+function GreetmeFunction(NameStorage) {
 
   var GreetPerson = "";
-  var name = '';
-  var Countkeep = name || {};
+ var name = '';
+  var Countkeep = NameStorage || {};
 
 
 
   function GreetLanguage(person, language) {
 
-    if (person != '') {
-      name = person;
+    if (NameStorage != '') {
+      name = NameStorage;
     }
-    if (name[person] === undefined){
-
-      //add an entry for the user that was greeted in the Object Map
-      name[person] = '';
-    }
+    // if (name[person] === undefined){
+    //
+    //   //add an entry for the user that was greeted in the Object Map
+    //   name[person] = '';
+    // }
 
     if (Countkeep[person] === undefined){
 
       //add an entry for the user that was greeted in the Object Map
-      Countkeep[person] = 0;
+      Countkeep[person] = '';
 }
     if (language === "English") {
 
@@ -43,9 +43,12 @@ function GreetmeFunction() {
 
   function GreetMe() {
 
-    return GreetPerson;
+    return Countkeep;
   }
 
+function newDisplay(){
+  return GreetPerson;
+}
   function CountPeople() {
     //console.log(Object.keys(Countkeep).length);
     return Object.keys(Countkeep).length;
@@ -58,6 +61,7 @@ function GreetmeFunction() {
   return {
     GreetLanguage,
     GreetMe,
-    CountPeople
+    CountPeople,
+    newDisplay
   }
 }

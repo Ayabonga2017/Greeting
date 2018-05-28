@@ -5,15 +5,11 @@ var ClearbtnElement = document.querySelector(".Clearbtn");
 var namegreet = document.querySelector(".namegreeted");
 var counterElem = document.querySelector(".counter");
 
-var NameStorage={};
+
+ var NameStorage = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
+ counterElem.innerHTML=Object.keys(NameStorage).length;
+
 var FactoryGreet = GreetmeFunction(NameStorage);
-
-
-if (localStorage['NameStorage']) {
-  NameStorage = JSON.parse(localStorage['NameStorage']);
-}
-// var NameStorage = localStorage.getItem('NamesGreted') ? JSON.parse(localStorage.getItem('NamesGreted')) : {};
-
 
 function Greetme() {
 
@@ -25,7 +21,7 @@ function Greetme() {
     var language = checkedRadioBtn.value;
     console.log(language);
     FactoryGreet.GreetLanguage(person, language);
-    namegreet.innerHTML = FactoryGreet.GreetMe();
+    namegreet.innerHTML = FactoryGreet.newDisplay();
     counterElem.innerHTML = FactoryGreet.CountPeople();
 
   }
@@ -38,12 +34,17 @@ GreetbtnElement.addEventListener('click', function() {
   var NamesGreted = InputTextElement.value;
   var Counted=counterElem.value;
 
-counterElem.innerHTML=FactoryGreet.CountPeople();
-localStorage.setItem("NamesGreted", JSON.stringify(FactoryGreet.GreetMe()));
+
+localStorage.setItem("users", JSON.stringify(FactoryGreet.GreetMe()));
 localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
+
+if (NameStorage == "") {
+InputTextElement.innerHTML = "please enter message";
+}
 })
 
 //clear button for local storage
 ClearbtnElement.addEventListener('click', function() {
   localStorage.clear();
+    counterElem.innerHTML= 0;
 });

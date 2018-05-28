@@ -6,7 +6,7 @@ describe("Greetings in different languges" ,function(){
 
         Greet.GreetLanguage("Aya", 'IsiXhosa');
 
-        assert.equal('Mhollo, Aya', Greet.GreetMe());
+        assert.equal('Mhollo, Aya', Greet.newDisplay());
 
       })
       it('should Greet Shaun in english', function(){
@@ -14,7 +14,7 @@ describe("Greetings in different languges" ,function(){
 
         greet.GreetLanguage("Shaun", 'English');
 
-        assert.equal('Hey, Shaun', greet.GreetMe());
+        assert.equal('Hey, Shaun', greet.newDisplay());
       })
 
       it('should be able to Greet Jacob in Afrikaans', function(){
@@ -22,7 +22,7 @@ describe("Greetings in different languges" ,function(){
 
         greet.GreetLanguage("Jacob", 'Afrikaans');
 
-        assert.equal('Halo, Jacob', greet.GreetMe());
+        assert.equal('Halo, Jacob', greet.newDisplay());
       })
 
       it('should not be able to Greet Jacob in Afrikaans ', function(){
@@ -30,6 +30,6 @@ describe("Greetings in different languges" ,function(){
 
         greet.GreetLanguage("Jacob", 'Afrikaans');
 
-        assert.equal('Exe, Jacob', greet.GreetMe());
+        assert.equal('Exe, Jacob', greet.newDisplay());
       })
     });

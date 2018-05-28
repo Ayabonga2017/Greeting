@@ -2,6 +2,9 @@
   margin-top: 1em;
   color: aqua;
 }
+body {
+  text-transform: capitalize;
+}
 .body{
   background-color:Aqua;
 }
