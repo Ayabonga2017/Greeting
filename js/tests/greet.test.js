@@ -25,11 +25,25 @@ describe("Greetings in different languges", function() {
     assert.equal('Halo, Jacob', greet.newDisplay());
   })
 
-  it('should not be able to Greet Jacob in Afrikaans ', function() {
+  it('should greet 3 people in different languges ', function() {
     var greet = GreetmeFunction();
 
-    greet.GreetLanguage("Jacob", 'Afrikaans');
+    greet.GreetLanguage("Ncumisa", 'Afrikaans');
+      greet.GreetLanguage("Asanda", 'English');
+        greet.GreetLanguage("Zee", 'IsiXhosa');
 
-    assert.equal('Exe, Jacob', greet.newDisplay());
+    assert.equal(3, greet.CountPeople());
+  })
+  it('should greet 6 people in different languges ', function() {
+    var greet = GreetmeFunction();
+
+    greet.GreetLanguage("Ncumisa", 'Afrikaans');
+      greet.GreetLanguage("Asanda", 'English');
+        greet.GreetLanguage("Zee", 'IsiXhosa');
+        greet.GreetLanguage("Jackson", 'Afrikaans');
+          greet.GreetLanguage("Jastine", 'English');
+            greet.GreetLanguage("JAbu", 'IsiXhosa');
+
+    assert.equal(6, greet.CountPeople());
   })
 });

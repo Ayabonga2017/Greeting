@@ -26,11 +26,9 @@ function Greetme() {
     if (person =="") {
           return namegreet.innerHTML= "Please enter name";
     }
-    if (checkedRadioBtn !=checkedRadioBtn) {
-        return GreetbtnElement.innerHTML= "Please select button";
+
     }
   }
-}
 
 
 GreetbtnElement.addEventListener('click', function() {
