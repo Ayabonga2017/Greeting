@@ -1,10 +1,8 @@
 function GreetmeFunction(NameStorage) {
 
   var GreetPerson = "";
- var name = '';
+  var name = '';
   var Countkeep = NameStorage || {};
-
-
 
   function GreetLanguage(person, language) {
 
@@ -13,11 +11,11 @@ function GreetmeFunction(NameStorage) {
     }
 
 
-    if (Countkeep[person] === undefined){
+    if (Countkeep[person] === undefined) {
 
-      //add an entry for the user that was greeted in the Object Map
       Countkeep[person] = '';
-}
+    }
+
     if (language === "English") {
 
       GreetPerson = "Hey, " + person;
@@ -42,9 +40,10 @@ function GreetmeFunction(NameStorage) {
     return Countkeep;
   }
 
-function newDisplay(){
-  return GreetPerson;
-}
+  function newDisplay() {
+    return GreetPerson;
+  }
+
   function CountPeople() {
     //console.log(Object.keys(Countkeep).length);
     return Object.keys(Countkeep).length;

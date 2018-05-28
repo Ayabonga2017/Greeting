@@ -2,11 +2,13 @@
   margin-top: 1em;
   color: aqua;
 }
+.counter{
+  color: red;
+
+}
+
 body {
   text-transform: capitalize;
-}
-.body{
-  background-color:Aqua;
 }
 
 .container {
@@ -17,20 +19,26 @@ body {
   font-family: arial;
   /* background-color:Aqua; */
 }
-.InputText{
+
+.InputText {
   font-size: 20px;
 }
-.namegreeted{
+
+.namegreeted {
   font-size: 20px;
-padding-left: 30%;
-/* background-color:Aqua; */
-color: blue;
+  padding-left: 30%;
+  /* background-color:Aqua; */
+  color: blue;
 }
+
 .counter {
   font-size: 3em;
 }
+.languageTypeRadio{
+color: red;
+}
 
-button {
+.button {
   padding: 1em;
   font-size: 1em;
   background-color: orange;
