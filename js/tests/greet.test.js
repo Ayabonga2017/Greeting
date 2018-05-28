@@ -24,6 +24,8 @@ describe("Greetings in different languges", function() {
 
     assert.equal('Halo, Jacob', greet.newDisplay());
   })
+    })
+  describe("Count for how many people were greeted", function() {
 
   it('should greet 3 people in different languges ', function() {
     var greet = GreetmeFunction();
@@ -42,7 +44,7 @@ describe("Greetings in different languges", function() {
         greet.GreetLanguage("Zee", 'IsiXhosa');
         greet.GreetLanguage("Jackson", 'Afrikaans');
           greet.GreetLanguage("Jastine", 'English');
-            greet.GreetLanguage("JAbu", 'IsiXhosa');
+            greet.GreetLanguage("Jabu", 'IsiXhosa');
 
     assert.equal(6, greet.CountPeople());
   })
