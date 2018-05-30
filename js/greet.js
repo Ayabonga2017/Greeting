@@ -7,6 +7,10 @@ var counterElem = document.querySelector(".counter");
 
 
 var NameStorage = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
+var input = document.getElementsByTagName('Input')[0]
+input.oninput = function(){
+  input.value = input.value.toUpperCase();
+}
 
 var FactoryGreet = GreetmeFunction(NameStorage);
 
@@ -21,17 +25,18 @@ function Greetme() {
 
   var person = InputTextElement.value;
 
+
   if (!languagetypes) {
     return namegreet.innerHTML = "Please select language";
   }
-var language = languagetypes.value;
+  var language = languagetypes.value;
   if (person === "") {
 
     return namegreet.innerHTML = "Please enter name";
-}
+  }
 
-FactoryGreet.GreetLanguage(person, language);
-namegreet.innerHTML = FactoryGreet.GreetedPerson();
+  FactoryGreet.GreetLanguage(person, language);
+  namegreet.innerHTML = FactoryGreet.GreetedPerson();
   counterElem.innerHTML = FactoryGreet.CountPeople();
   localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
   localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
