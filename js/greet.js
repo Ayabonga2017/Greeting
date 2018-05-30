@@ -13,27 +13,25 @@ var FactoryGreet = GreetmeFunction(NameStorage);
 counterElem.innerHTML = Object.keys(NameStorage).length;
 
 function Greetme() {
-  var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
-  if (checkedRadioBtn) {
-    var lang = checkedRadioBtn.value;
+  var languagetypes = document.querySelector("input[name='languageType']:checked");
+  if (languagetypes) {
+    var language = languagetypes.value;
   }
 
-  if (!checkedRadioBtn) {
-    return namegreet.innerHTML = "Please select language";
-  }
 
-  var language = checkedRadioBtn.value;
   var person = InputTextElement.value;
 
-  if (person ==='') {
-    return namegreet.innerHTML = "Please enter name";
-  } else if (!person) {
-    return counterElem.innerHTML =0;
-
+  if (!languagetypes) {
+    return namegreet.innerHTML = "Please select language";
   }
-namegreet.innerHTML = FactoryGreet.GreetedPerson();
-  FactoryGreet.GreetLanguage(person, language);
+var language = languagetypes.value;
+  if (person === "") {
 
+    return namegreet.innerHTML = "Please enter name";
+}
+
+FactoryGreet.GreetLanguage(person, language);
+namegreet.innerHTML = FactoryGreet.GreetedPerson();
   counterElem.innerHTML = FactoryGreet.CountPeople();
   localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
   localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
