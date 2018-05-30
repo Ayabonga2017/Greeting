@@ -1,19 +1,15 @@
 function GreetmeFunction(NameStorage) {
 
   var GreetPerson = "";
-  var name = '';
   var Countkeep = NameStorage || {};
 
-  function GreetLanguage(person, language) {
 
-    if (NameStorage != '') {
-      name = NameStorage;
-    }
+  function GreetLanguage(person, language) {
 
 
     if (Countkeep[person] === undefined) {
 
-      Countkeep[person] = '';
+      Countkeep[person] = 0;
     }
 
     if (language === "English") {
@@ -40,7 +36,7 @@ function GreetmeFunction(NameStorage) {
     return Countkeep;
   }
 
-  function newDisplay() {
+  function GreetedPerson() {
     return GreetPerson;
   }
 
@@ -50,13 +46,10 @@ function GreetmeFunction(NameStorage) {
 
   }
 
-
-
-
   return {
     GreetLanguage,
     GreetMe,
     CountPeople,
-    newDisplay
+    GreetedPerson
   }
 }

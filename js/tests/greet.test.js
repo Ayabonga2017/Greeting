@@ -6,7 +6,7 @@ describe("Greetings in different languges", function() {
 
     Greet.GreetLanguage("Aya", 'IsiXhosa');
 
-    assert.equal('Mhollo, Aya', Greet.newDisplay());
+    assert.equal('Mhollo, Aya', Greet.NamesGreet());
 
   })
   it('should Greet Shaun in english', function() {
@@ -14,7 +14,7 @@ describe("Greetings in different languges", function() {
 
     greet.GreetLanguage("Shaun", 'English');
 
-    assert.equal('Hey, Shaun', greet.newDisplay());
+    assert.equal('Hey, Shaun', greet.NamesGreet());
   })
 
   it('should be able to Greet Jacob in Afrikaans', function() {
@@ -22,7 +22,7 @@ describe("Greetings in different languges", function() {
 
     greet.GreetLanguage("Jacob", 'Afrikaans');
 
-    assert.equal('Halo, Jacob', greet.newDisplay());
+    assert.equal('Halo, Jacob', greet.NamesGreet());
   })
     })
   describe("Count for how many people were greeted", function() {

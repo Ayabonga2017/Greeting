@@ -7,41 +7,40 @@ var counterElem = document.querySelector(".counter");
 
 
 var NameStorage = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
-counterElem.innerHTML = Object.keys(NameStorage).length;
 
 var FactoryGreet = GreetmeFunction(NameStorage);
 
-function Greetme() {
+counterElem.innerHTML = Object.keys(NameStorage).length;
 
+function Greetme() {
   var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
   if (checkedRadioBtn) {
+    var lang = checkedRadioBtn.value;
+  }
+  if (!checkedRadioBtn){
+    return namegreet.innerHTML= "Please select language"
+ }
 
-    var person = InputTextElement.value;
-    console.log(person);
     var language = checkedRadioBtn.value;
-    console.log(language);
+    var person = InputTextElement.value;
+
+
     FactoryGreet.GreetLanguage(person, language);
-    namegreet.innerHTML = FactoryGreet.newDisplay();
+    namegreet.innerHTML = FactoryGreet.GreetedPerson();
     counterElem.innerHTML = FactoryGreet.CountPeople();
-    if (person =="") {
-          return namegreet.innerHTML= "Please enter name";
-    }
+
+    localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
+    localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
+
+    if (person === "") {
+      return namegreet.innerHTML = "Please enter name";
 
     }
   }
-
-
 GreetbtnElement.addEventListener('click', function() {
-  Greetme(NamesGreted);
-
-  var NamesGreted = InputTextElement.value;
-  var Counted = counterElem.value;
-  localStorage.setItem("users", JSON.stringify(FactoryGreet.GreetMe()));
-  localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
-
+  Greetme();
 })
 
-//clear button for local storage
 ClearbtnElement.addEventListener('click', function() {
   localStorage.clear();
   counterElem.innerHTML = 0;
