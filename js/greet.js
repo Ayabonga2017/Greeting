@@ -17,26 +17,29 @@ function Greetme() {
   if (checkedRadioBtn) {
     var lang = checkedRadioBtn.value;
   }
-  if (!checkedRadioBtn){
-    return namegreet.innerHTML= "Please select language"
- }
 
-    var language = checkedRadioBtn.value;
-    var person = InputTextElement.value;
-
-
-    FactoryGreet.GreetLanguage(person, language);
-    namegreet.innerHTML = FactoryGreet.GreetedPerson();
-    counterElem.innerHTML = FactoryGreet.CountPeople();
-
-    localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
-    localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
-
-    if (person === "") {
-      return namegreet.innerHTML = "Please enter name";
-
-    }
+  if (!checkedRadioBtn) {
+    return namegreet.innerHTML = "Please select language";
   }
+
+  var language = checkedRadioBtn.value;
+  var person = InputTextElement.value;
+
+  if (person ==='') {
+    return namegreet.innerHTML = "Please enter name";
+  } else if (!person) {
+    return counterElem.innerHTML =0;
+
+  }
+namegreet.innerHTML = FactoryGreet.GreetedPerson();
+  FactoryGreet.GreetLanguage(person, language);
+
+  counterElem.innerHTML = FactoryGreet.CountPeople();
+  localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
+  localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
+}
+
+
 GreetbtnElement.addEventListener('click', function() {
   Greetme();
 })
