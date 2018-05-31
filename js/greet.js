@@ -39,7 +39,7 @@ function Greetme() {
   namegreet.innerHTML = FactoryGreet.GreetedPerson();
   counterElem.innerHTML = FactoryGreet.CountPeople();
   localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
-   localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
+
 }
 
 
