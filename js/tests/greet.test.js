@@ -48,4 +48,14 @@ describe("Greetings in different languges", function() {
 
     assert.equal(6, greet.CountPeople());
   })
+
+  it('should return 1 when greeting the same person twice ', function() {
+    var greet = GreetmeFunction();
+
+        greet.GreetLanguage("Jackson", 'Afrikaans');
+        greet.GreetLanguage("Jackson", 'IsiXhosa');
+
+
+    assert.equal(1, greet.CountPeople());
+  })
 });

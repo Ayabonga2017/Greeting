@@ -8,7 +8,7 @@ var counterElem = document.querySelector(".counter");
 
 var NameStorage = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
 var upperCase = document.getElementsByTagName('Input')[0]
-upperCase.oninput = function(){
+upperCase.oninput = function() {
   upperCase.value = upperCase.value.toUpperCase();
 }
 
@@ -39,7 +39,7 @@ function Greetme() {
   namegreet.innerHTML = FactoryGreet.GreetedPerson();
   counterElem.innerHTML = FactoryGreet.CountPeople();
   localStorage.setItem("Names", JSON.stringify(FactoryGreet.GreetMe()));
-  localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
+   localStorage.setItem("Counter", JSON.stringify(FactoryGreet.CountPeople()));
 }
 
 
