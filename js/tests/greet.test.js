@@ -66,10 +66,11 @@ describe("Greeted name ", function() {
     greet.GreetLanguage({name: "Aya"});
     assert.equal(greet.GreetedPerson(), name);
       })
+
   it('should not Greet the person ', function() {
 
-    var greet = GreetmeFunction({});
-     greet.GreetedPerson({ name : "Aya" });
+    var greet = GreetmeFunction({name:"Aya"});
+     greet.GreetedPerson();
 
     console.log(greet.GreetMe());
     assert.notEqual(greet.GreetMe(),name);
