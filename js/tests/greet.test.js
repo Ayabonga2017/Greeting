@@ -60,11 +60,19 @@ describe("Count for how many people were greeted", function() {
   })
 })
 describe("Greeted name ", function() {
-  it('should return the Greeted person as Aya ', function() {
 
-    var greet = GreetmeFunction();
+  it('should return Greeted person  as Aya ', function() {
+  var greet = GreetmeFunction();
     greet.GreetLanguage({name: "Aya"});
-
     assert.equal(greet.GreetedPerson(), name);
+      })
+  it('should not Greet the person ', function() {
+
+    var greet = GreetmeFunction({});
+     greet.GreetedPerson({ name : "Aya" });
+
+    console.log(greet.GreetMe());
+    assert.notEqual(greet.GreetMe(),name);
   })
+
 });

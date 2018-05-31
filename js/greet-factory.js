@@ -4,9 +4,10 @@ function GreetmeFunction(NameStorage) {
   var Countkeep = NameStorage || {};
   var person="";
 
-  function setperson(person) {
-    if (person !== "") {
-      return    person;
+
+  function setperson(value) {
+    if (value !== "") {
+    return person;
     }
 
   }
