@@ -7,9 +7,9 @@ var counterElem = document.querySelector(".counter");
 
 
 var NameStorage = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
-var input = document.getElementsByTagName('Input')[0]
-input.oninput = function(){
-  input.value = input.value.toUpperCase();
+var upperCase = document.getElementsByTagName('Input')[0]
+upperCase.oninput = function(){
+  upperCase.value = upperCase.value.toUpperCase();
 }
 
 var FactoryGreet = GreetmeFunction(NameStorage);
