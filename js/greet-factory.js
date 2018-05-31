@@ -2,7 +2,14 @@ function GreetmeFunction(NameStorage) {
 
   var GreetPerson = "";
   var Countkeep = NameStorage || {};
+  var person="";
 
+  function setperson(person) {
+    if (person !== "") {
+      return    person;
+    }
+
+  }
 
   function GreetLanguage(person, language) {
 
@@ -31,6 +38,7 @@ function GreetmeFunction(NameStorage) {
 
   }
 
+
   function GreetMe() {
 
     return Countkeep;
@@ -50,6 +58,7 @@ function GreetmeFunction(NameStorage) {
     GreetLanguage,
     GreetMe,
     CountPeople,
-    GreetedPerson
+    GreetedPerson,
+    setperson
   }
 }

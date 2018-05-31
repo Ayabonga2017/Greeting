@@ -24,15 +24,15 @@ describe("Greetings in different languges", function() {
 
     assert.equal('Halo, Jacob', greet.GreetedPerson());
   })
-    })
-  describe("Count for how many people were greeted", function() {
+})
+describe("Count for how many people were greeted", function() {
 
   it('should greet 3 people in different languges ', function() {
     var greet = GreetmeFunction();
 
     greet.GreetLanguage("Ncumisa", 'Afrikaans');
-      greet.GreetLanguage("Asanda", 'English');
-        greet.GreetLanguage("Zee", 'IsiXhosa');
+    greet.GreetLanguage("Asanda", 'English');
+    greet.GreetLanguage("Zee", 'IsiXhosa');
 
     assert.equal(3, greet.CountPeople());
   })
@@ -40,11 +40,11 @@ describe("Greetings in different languges", function() {
     var greet = GreetmeFunction();
 
     greet.GreetLanguage("Ncumisa", 'Afrikaans');
-      greet.GreetLanguage("Asanda", 'English');
-        greet.GreetLanguage("Zee", 'IsiXhosa');
-        greet.GreetLanguage("Jackson", 'Afrikaans');
-          greet.GreetLanguage("Jastine", 'English');
-            greet.GreetLanguage("Jabu", 'IsiXhosa');
+    greet.GreetLanguage("Asanda", 'English');
+    greet.GreetLanguage("Zee", 'IsiXhosa');
+    greet.GreetLanguage("Jackson", 'Afrikaans');
+    greet.GreetLanguage("Jastine", 'English');
+    greet.GreetLanguage("Jabu", 'IsiXhosa');
 
     assert.equal(6, greet.CountPeople());
   })
@@ -52,10 +52,20 @@ describe("Greetings in different languges", function() {
   it('should return 1 when greeting the same person twice ', function() {
     var greet = GreetmeFunction();
 
-        greet.GreetLanguage("Jackson", 'Afrikaans');
-        greet.GreetLanguage("Jackson", 'IsiXhosa');
+
+    greet.GreetLanguage("Jackson", 'Afrikaans');
+    greet.GreetLanguage("Jackson", 'IsiXhosa');
 
 
     assert.equal(1, greet.CountPeople());
+  })
+
+  it('should return Aya ', function() {
+
+    var greet = GreetmeFunction();
+    greet.GreetLanguage( {name: "Aya"});
+
+
+    assert.equal(greet.GreetedPerson(), name);
   })
 });
